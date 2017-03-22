@@ -17,3 +17,4 @@ def convert(s, num_rows)
 end
 
 p convert("testing", 3)
+p convert("waitaminute", 5)
