@@ -4,13 +4,16 @@ def balanced?(str)
   str.split('').each do |char|
     if hash.include?(char)
       stack << hash[char]
-    elsif !stack.empty? && stack.last == char
+    elsif stack.last == char
       stack.pop
     else
       return 'NO'
     end
   end
-  'YES'
+  if stack.empty?
+    return 'YES'
+  end
+  'NO'
 end
 
 p balanced?("()")
